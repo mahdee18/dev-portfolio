@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import CountUp from 'react-countup';
-import { fadeIn } from '../varients';
 import { useInView } from 'react-intersection-observer';
 
 const About = () => {
@@ -15,7 +14,7 @@ const About = () => {
     }, []);
 
     return (
-        <section className='section w-full my-12' id='about'>
+        <section className='section w-full lg:my-32' id='about'>
             <div className='flex flex-col md:flex-row'>
                 <div className='md:w-1/2'>
                     <div className='w-full bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'></div>
@@ -24,7 +23,7 @@ const About = () => {
                     ref={ref}
                     data-aos='fade-left'
                     data-aos-delay='300'
-                    className='md:w-1/2 mt-48'
+                    className='md:w-1/2 lg:mt-48'
                 >
                     <div className='flex flex-col sm:px-3 justify-center h-[640px] md:h-auto'>
                         <div className='mb-8'>
