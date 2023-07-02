@@ -34,7 +34,7 @@ const Work = () => {
                             <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'><span className='text-3xl text-white'>Project Title</span></div>
                         </div>
                     </div>
-                    <div className='flex-1 flex flex-col gap-y-12'>
+                    <div className='flex-1 flex flex-col gap-y-12 '>
                         <div
                             className='group relative overflow-hidden border-2 border-white/50 rounded-xl'
                             data-aos='fade-up'
