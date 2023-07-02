@@ -54,7 +54,7 @@
     @apply rounded-full font-primary text-white font-medium;
   }
   .btn-sm {
-    @apply h-[48px] px-6 text-sm;
+    @apply h-[48px] px-6 border-0 rounded-lg text-white text-sm;
   }
   .btn-lg {
     @apply h-[56px] px-10 text-base;
