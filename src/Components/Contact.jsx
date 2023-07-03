@@ -11,7 +11,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section className='lg:my-96 lg:section' id='contact'>
+        <section className='lg:my-48 lg:section' id='contact'>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row'>
                     <div className='flex-1' data-aos='fade-down' data-aos-duration='800'>

@@ -48,7 +48,7 @@ const About = () => {
                                     Experience.
                                 </div>
                             </div>
-                            <div className='mt-auto'>
+                            <div className='mt-auto mx-10'>
                                 <div>
                                     <div className='text-[40px] font-tertiary text-gradient my-2'>
                                         <CountUp start={0} end={100} duration={3}></CountUp>+

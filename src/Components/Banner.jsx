@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import avater from '../assets/avatar.svg';
-import { FaGithub, FaFacebook, FaLinkedinIn } from 'react-icons/fa';
+import resume from '../assets/Mahdee -Resume(updated).pdf'
+import { FaGithub, FaFacebook, FaLinkedinIn, FaDownload } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 
 const Banner = () => {
@@ -59,9 +60,9 @@ const Banner = () => {
                             data-aos-delay='600'
                             className='flex items-center max-w-max gap-x-6 mb-8 mx-auto lg:mx-0'
                         >
-                            <button className='btn btn-lg rounded-full border-0 text-white'>Contact me</button>
-                            <a href='' className='text-gradient btn-link no-underline'>
-                                My Portfolio
+                            <a href="#contact" className='btn btn-lg rounded-full border-0 text-white'>Contact me</a>
+                             <a href={resume} className='text-gradient btn-link no-underline' download={'Mahdee -Resumee.pdf'}>
+                             <FaDownload className='inline mr-2 text-white'></FaDownload>Download Resume 
                             </a>
                         </div>
 
@@ -70,13 +71,13 @@ const Banner = () => {
                             data-aos-delay='700'
                             className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'
                         >
-                            <a href='#'>
+                            <a href='https://github.com/mahdee18'>
                                 <FaGithub></FaGithub>
                             </a>
-                            <a href='#'>
+                            <a href='https://www.linkedin.com/in/mahdee-al-amin-8b7134202/'>
                                 <FaLinkedinIn></FaLinkedinIn>
                             </a>
-                            <a href='#'>
+                            <a href='https://web.facebook.com/mahdee.al.amin.09y'>
                                 <FaFacebook></FaFacebook>
                             </a>
                         </div>
