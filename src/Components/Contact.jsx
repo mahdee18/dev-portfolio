@@ -20,7 +20,7 @@ const Contact = () => {
                             <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>Let's Work <br />Together!</h2>
                         </div>
                     </div>
-                    <form className='flex-1 border rounded-2xl flex flex-col gap-y-6 p-6 items-start' data-aos='fade-up' data-aos-duration='800' data-aos-delay='200'>
+                    <form className='flex-1 border rounded-2xl flex flex-col gap-y-6 p-6 items-startj' data-aos='fade-up' data-aos-duration='800' data-aos-delay='200'>
                         <input className='border-b bg-transparent py-4 outline-none w-full placeholder:text-white focus:border-accent transition-all' type='text' placeholder='Your Name' />
                         <input className='border-b bg-transparent py-4 outline-none w-full placeholder:text-white focus:border-accent transition-all' type='email' placeholder='Your Email' />
                         <textarea className='border-b bg-transparent py-4 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' placeholder='Your Message' name='' id='' cols='80' rows='6'></textarea>

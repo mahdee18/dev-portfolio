@@ -36,7 +36,7 @@ const Services = () => {
   ];
 
   return (
-    <section className='section lg:my-48' id='services'>
+    <section className='section pt-48' id='services'>
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row'>
           <div
