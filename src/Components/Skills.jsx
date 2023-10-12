@@ -18,7 +18,7 @@ const Skills = () => {
     return false;
   });
   return (
-    <section className="min-h-fit my-36 max-w-7xl mx-auto" id="skills">
+    <section className="min-h-fit my-10 lg:my-36 max-w-7xl mx-auto" id="skills">
       <div className="text-center">
         <h3 className="text-4xl text-gradient font-semibold">
           My Skills</h3>

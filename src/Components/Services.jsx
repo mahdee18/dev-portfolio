@@ -30,11 +30,11 @@ const Services = () => {
   ];
 
   return (
-    <section className='section pt-48' id='services'>
+    <section className='section lg:pt-48' id='services'>
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row'>
           <div
-            className='flex-1 lg:bg-services lg:bg-bottom lg:bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'
+            className='flex-1 lg:bg-services lg:bg-bottom lg:bg-no-repeat mix-blend-lighten lg:mb-12 lg:mb-0'
             data-aos='fade-right'
           >
             <h2 className='text-accent h2'>What I Do</h2>

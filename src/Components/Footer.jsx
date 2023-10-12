@@ -5,8 +5,8 @@ import { MdOutlineMail } from 'react-icons/md';
 
 const Footer = () => {
     return (
-        <footer className=" py-12 text-white">
-            <div className="container mx-auto py-12 px-8">
+        <footer className=" lg:py-0 py-12 text-white">
+            <div className="container mx-auto lg:py-0 py-12 px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div>
                         <div className="my-2">

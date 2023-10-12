@@ -34,7 +34,7 @@ const Work = () => {
 
                     </div>
                     {/* Project cards */}
-                    <div className='grid md:grid-cols-3 gap-8 '>
+                    <div className='grid md:grid-cols-3 gap-8 md:mt-8 '>
                         {projects.map((project, index) => (
                             <div key={index} className="group relative overflow-hidden border-2 border-white/50 rounded-xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                                 <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
