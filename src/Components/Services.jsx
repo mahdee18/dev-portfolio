@@ -12,25 +12,19 @@ const Services = () => {
     {
       name: 'Web Design',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, illo. Recusandae quis saepe, nisi sequi odio soluta velit iusto blanditiis.',
+        'Immerse yourself in visually captivating and user-friendly website designs. I craft seamless digital experiences that leave a lasting impression, ensuring your online presence reflects your unique identity.',
       link: 'Learn More',
     },
     {
       name: 'Web Development',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, illo. Recusandae quis saepe, nisi sequi odio soluta velit iusto blanditiis.',
-      link: 'Learn More',
-    },
-    {
-      name: 'UI/UX Design',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, illo. Recusandae quis saepe, nisi sequi odio soluta velit iusto blanditiis.',
+        'Transforming ideas into interactive and responsive websites is my expertise. I breathe life into designs, employing cutting-edge technologies to create robust, high-performance websites that engage and delight users.',
       link: 'Learn More',
     },
     {
       name: 'Product Branding',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, illo. Recusandae quis saepe, nisi sequi odio soluta velit iusto blanditiis.',
+        ' Elevate your brand identity with my strategic product branding services. I blend creativity with market insights to develop compelling brand stories and visual identities.I ensure your brand stands out and resonates with your target audience.',
       link: 'Learn More',
     },
   ];

@@ -14,7 +14,7 @@ const About = () => {
     }, []);
 
     return (
-        <section className='section w-full lg:my-32' id='about'>
+        <section className='section w-full lg:my-32 py-8 md:py-0' id='about'>
             <div className='flex flex-col md:flex-row'>
                 <div className='md:w-1/2'>
                     <div className='w-full bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'></div>
@@ -25,15 +25,14 @@ const About = () => {
                     data-aos-delay='300'
                     className='md:w-1/2 lg:mt-48'
                 >
-                    <div className='flex flex-col sm:px-3 justify-center h-[640px] md:h-auto'>
+                    <div className='flex flex-col sm:px-8 justify-center h-[640px] md:h-auto'>
                         <div className='mb-8'>
                             <h2 className='h2 text-accent'>About Me</h2>
                             <h3 className='h3 my-3'>I'm a freelance Frontend Developer.</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, labore? Commodi, eaque saepe, quisquam
-                                ducimus quibusdam eum mollitia at perferendis aut corporis maiores cupiditate! Veritatis laboriosam
-                                delectus provident sint itaque, obcaecati explicabo officiis quis? Vel sed tenetur corporis nam
-                                voluptatibus.
+                                Be passionate about web development and design. I would like to have a new-paced
+                                organization where technical skills and creative thinking are useful as well as being able to
+                                share my ability to learn quickly and discover new things as a web developer.
                             </p>
                         </div>
                         <div className='flex justify-start items-center gap-6'>

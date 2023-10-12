@@ -19,14 +19,14 @@ const Banner = () => {
                         <h2
                             data-aos='fade-up'
                             data-aos-delay='300'
-                            className='text-[55px] font-bold leading-[.8] lg:text-[80px] uppercase'
+                            className='text-[55px] font-bold leading-[.8] lg:text-[50px] uppercase'
                         >
                             Mahdee <span>Al Amin</span>
                         </h2>
                         <div
                             data-aos='fade-up'
                             data-aos-delay='300'
-                            className='mb-6 my-6 text-[36px] lg:text-[50px] font-secondary font-semibold uppercase leading-1'
+                            className='mb-6 my-6 text-[36px] lg:text-[45px] font-secondary font-semibold uppercase leading-1'
                         >
                             <span className='text-white mr-4'>I'm A </span>
                             <TypeAnimation
@@ -49,10 +49,7 @@ const Banner = () => {
                             data-aos-delay='500'
                             className='mb-8 max-w-lg lg:mx-0 mx-auto'
                         >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur provident magnam quis voluptatem sequi
-                            ducimus voluptatibus, inventore et maiores ad tenetur consequatur reprehenderit quia sint eveniet neque! Vero,
-                            facilis quidem similique fugit, inventore perspiciatis consequuntur modi accusamus ad maiores voluptatem rem
-                            incidunt delectus eligendi atque laudantium, iste hic itaque tenetur.
+                           Welcome to my digital playground! I'm a web wizard, dedicated to creating captivating marvels. With sleek design and cutting-edge technology, I bring ideas to life with an enchanting touch. Let's embark on an extraordinary journey of innovation together!
                         </p>
 
                         <div

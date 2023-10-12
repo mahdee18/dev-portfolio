@@ -6,6 +6,8 @@ import About from './About';
 import Work from './Work';
 import Contact from './Contact';
 import Services from './Services';
+import Footer from './Footer';
+import Skills from './Skills';
 
 const Home = () => {
     return (
@@ -15,8 +17,10 @@ const Home = () => {
             <Nav />
             <About />
             <Services />
+            <Skills /> 
             <Work />
             <Contact />
+            <Footer />
             <div className='h-auto'></div>
         </div>
     );

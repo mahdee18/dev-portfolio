@@ -17,7 +17,7 @@ const Contact = () => {
                     <div className='flex-1' data-aos='fade-down' data-aos-duration='800'>
                         <div className=''>
                             <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>Get In Touch</h4>
-                            <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>Let's Work <br />Together!</h2>
+                            <h2 className='text-[35px] lg:text-[50px] leading-none mb-12'>Let's Work <br />Together!</h2>
                         </div>
                     </div>
                     <form className='flex-1 border rounded-2xl flex flex-col gap-y-6 p-6 items-startj' data-aos='fade-up' data-aos-duration='800' data-aos-delay='200'>
