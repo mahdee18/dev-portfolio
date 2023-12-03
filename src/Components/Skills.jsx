@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { content } from "./Content";
+import SectionTitle from "./SectionTitile";
 
 const Skills = () => {
   const { skills } = content;
@@ -18,11 +19,10 @@ const Skills = () => {
     return false;
   });
   return (
-    <section className="min-h-fit my-10 lg:my-36 max-w-7xl mx-auto" id="skills">
-      <div className="text-center">
-        <h3 className="text-4xl text-gradient font-semibold">
-          My Skills</h3>
-        <p className="text-gray-400 mt-3 text-lg">Mastering Technologies for Seamless Digital Experiences</p>
+    <section className="mb-32 lg:pb-64 w-5/6 mx-auto" id="skills">
+      <div className="text-start lg:text-center">
+        <SectionTitle title={"My"} subtitle={"Skills"}></SectionTitle>
+        <p className="text-gray-200 mt-3 text-lg">Mastering Technologies for Seamless Digital Experiences</p>
       </div>
       <div className="mt-6 mb-8">
         <div className="flex justify-center space-x-6">
@@ -46,7 +46,7 @@ const Skills = () => {
           </button>
         </div>
       </div>
-      <div className="md:container px-5 py-6">
+      <div className="md:container py-6">
         <div className="grid md:grid-cols-3 gap-4 ">
           {filteredSkills.map((skill, i) => (
             <div

@@ -36,8 +36,8 @@ const Footer = () => {
                                 <li><a href="#skills" className="hover:text-gray-400">Skills</a></li>
                             </ul>
                             <ul className="space-y-2 ms-20">
-                                <li><a href="#projects" className="hover:text-gray-400">Projects</a></li>
-                                <li><a href="#" className="hover:text-gray-400">Contact Me</a></li>
+                                <li><a href="#work" className="hover:text-gray-400">Projects</a></li>
+                                <li><a href="#contact" className="hover:text-gray-400">Contact Me</a></li>
                             </ul>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ const Footer = () => {
                         <h3 className="text-2xl font-semibold mb-4">Keep in touch</h3>
                         <ul className="flex space-x-4 justify-center">
                             <li><a href="https://www.linkedin.com/in/mahdee-al-amin" target='_blank' className="hover:text-gray-400 text-xl"><BsLinkedin /></a></li>
-                            <li><a href="https://web.facebook.com/mahdee.al.amin.09y" className="hover:text-gray-400 text-xl"><FaFacebook /></a></li>
+                            <li><a href="https://web.facebook.com/mahdee.al.amin2010" className="hover:text-gray-400 text-xl"><FaFacebook /></a></li>
                             <li><a href="https://github.com/mahdee18" target='_blank' className="hover:text-gray-400 text-xl"><FaGithub /></a></li>
                         </ul>
                     </div>

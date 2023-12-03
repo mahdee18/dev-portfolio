@@ -40,23 +40,30 @@
   }
 
   .h2 {
-    @apply font-primary text-[32px] mb-6 tracking-[10%] uppercase;
+    @apply  text-[32px] mb-6 tracking-[10%] uppercase;
   }
 
   .h3 {
-    @apply font-primary font-semibold text-[26px] mb-6 leading-[46px];
+    @apply  font-semibold text-[26px] mb-6 leading-[46px];
   }
 
   .btn {
-    @apply rounded-full font-primary text-white font-medium;
+    @apply rounded-full text-white font-medium;
   }
 
   .btn-sm {
-    @apply h-[28px] px-6 border-0 rounded-lg text-white text-sm;
+    @apply h-[28px] px-6 border-0 text-white text-sm;
   }
 
   .btn-lg {
-    @apply h-[40px] px-4 text-base;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5%;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   .btn-link {

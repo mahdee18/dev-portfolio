@@ -12,9 +12,11 @@ import reactjs from "../assets/Skills/react.png";
 import tailwind from "../assets/Skills/tailwind.png";
 import vscode from "../assets/Skills/vscode.png";
 
-import img1 from '../assets/capture.png';
-import img2 from '../assets/toy.png';
-import img3 from '../assets/thai.png';
+import img1 from '../assets/Capture1.png';
+import img2 from '../assets/Toy1.png';
+import img3 from '../assets/Thai1.png';
+import img4 from '../assets/NexusBank.png';
+import img5 from '../assets/RoyalRent.png';
 export const content = {
   skills: [
     {
@@ -118,8 +120,14 @@ export const content = {
 
  projects: [
     {
+      "title": "Nexus Bank Ltd.",
+      "description": "Developed a website focused on Digital Banking Web Application.",
+      "previewLink": "https://nexus-cc1a9.web.app/",
+      "imageSrc": img4
+    },
+    {
       "title": "Capture Academy",
-      "description": "Developed a visually captivating website theme focused on photography education and summer camp.",
+      "description": "Developed a website focused on photography education and summer camp.",
       "previewLink": "https://capture-academy-1a91f.web.app/",
       "imageSrc": img1
     },
@@ -134,6 +142,12 @@ export const content = {
       "description": "Create an exclusive online platform dedicated to Thai cuisine.",
       "previewLink": "https://thai-kitchen-d45d7.web.app/",
       "imageSrc": img3
+    },
+    {
+      "title": "Royal Rent",
+      "description": "Create an exclusive online platform dedicated to Digital Car Rental Web App.",
+      "previewLink": "https://royal-rent-client.vercel.app/",
+      "imageSrc": img5
     }
   ]
 

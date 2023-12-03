@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import avater from '../assets/avatar.svg';
+import avater from '../assets/Profile.png';
 import resume from '../assets/Mahdee -Resume(updated).pdf'
 import { FaGithub, FaFacebook, FaLinkedinIn, FaDownload } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
@@ -49,7 +49,7 @@ const Banner = () => {
                             data-aos-delay='500'
                             className='mb-8 max-w-lg lg:mx-0 mx-auto'
                         >
-                           Welcome to my digital playground! I'm a web wizard, dedicated to creating captivating marvels. With sleek design and cutting-edge technology, I bring ideas to life with an enchanting touch. Let's embark on an extraordinary journey of innovation together!
+                            Welcome to my digital playground! I'm a web wizard, dedicated to creating captivating marvels. With sleek design and cutting-edge technology, I bring ideas to life with an enchanting touch. Let's embark on an extraordinary journey of innovation together!
                         </p>
 
                         <div
@@ -57,9 +57,9 @@ const Banner = () => {
                             data-aos-delay='600'
                             className='flex items-center max-w-max gap-x-6 mb-8 mx-auto lg:mx-0'
                         >
-                            <a href="#contact" className='btn btn-lg rounded-full border-0 text-white'>Contact me</a>
-                             <a href={resume} className='text-gradient btn-link no-underline' download={'Mahdee -Resumee.pdf'}>
-                             <FaDownload className='inline mr-2 text-white'></FaDownload>Download Resume 
+                            <a href="#contact" className='btn btn-lg border-0 text-white'>Contact me</a>
+                            <a href={resume} className='text-gradient btn-link no-underline' download={'Mahdee -Resumee.pdf'}>
+                                <FaDownload className='inline mr-2 text-white'></FaDownload>Download Resume
                             </a>
                         </div>
 

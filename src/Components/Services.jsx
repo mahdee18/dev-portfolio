@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BsArrowUpRight } from 'react-icons/bs';
+import SectionTitle from './SectionTitile';
 
 const Services = () => {
   useEffect(() => {
@@ -37,9 +38,9 @@ const Services = () => {
             className='flex-1 lg:bg-services lg:bg-bottom lg:bg-no-repeat mix-blend-lighten lg:mb-12 lg:mb-0'
             data-aos='fade-right'
           >
-            <h2 className='text-accent h2'>What I Do</h2>
-            <h3 className='h3 max-w-[455px] mb-16'>I'm a freelance frontend developer.</h3>
-            <button className='btn btn-lg border-0 text-white rounded-full'>See my projects</button>
+            <SectionTitle title={"What I"} subtitle={"Do"}></SectionTitle>
+            <h3 className='font-secondary font-semibold uppercase leading-1 text-[36px] max-w-[455px] mb-16'>I'm a freelance frontend developer.</h3>
+            <button className='btn btn-lg border-0 text-white'>See my projects</button>
           </div>
           <div>
             <div>
@@ -47,7 +48,7 @@ const Services = () => {
                 const { name, description, link } = service;
                 return (
                   <div
-                    className='border-b border-white/20 h-[146px] mb-[38px] flex'
+                    className=' border-white/20 h-[146px] mt-4 mb-[38px] flex'
                     key={index}
                     data-aos='fade-left'
                     data-aos-delay={index * 100}
