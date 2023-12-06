@@ -23,7 +23,7 @@ const Work = () => {
     return (
         <>
             <section className='section' id='work'>
-                <div className='container mx-auto py-64'>
+                <div className='container mx-auto py-0 md:py-64'>
                     <div className=''>
                         {/* Your introductory content */}
                         <div className='mb-10 lg:mb-0'>
@@ -43,7 +43,7 @@ const Work = () => {
                         ))}
                     </div>
                     {/* View All Project Button */}
-                    <div className='text-center'>
+                    <div className='text-center pt-6 md:pt-0'>
                         {displayedProjects < projects.length && (
                             <button className='btn btn-lg text-white border-0' onClick={showAllProjects}>View All Projects</button>
                         )}
