@@ -129,6 +129,14 @@ export const content = {
             "imageSrc": img4
         },
         {
+            "title": "Royal Rent",
+            "description": "Create an exclusive online platform dedicated to Digital Car Rental Web App.",
+            "live_link": "https://royal-rent-client.vercel.app/",
+            "client": "https://github.com/mutanim24/royal-rent-client",
+            "server": "https://github.com/mutanim24/royal-rent-server",
+            "imageSrc": img5
+        },
+        {
             "title": "Capture Academy",
             "description": "Developed a website focused on photography education and summer camp.",
             "live_link": "https://capture-academy-1a91f.web.app/",
@@ -144,22 +152,7 @@ export const content = {
             "server": "https://github.com/mahdee18/smart-toy-market-server",
             "imageSrc": img2
         },
-        {
-            "title": "Thai Kitchen",
-            "description": "Create an exclusive online platform dedicated to Thai cuisine.",
-            "live_link": "https://thai-kitchen-d45d7.web.app/",
-            "client": "https://github.com/mahdee18/thai-kitchen-client",
-            "server": "https://github.com/mahdee18/thai-kitchen-server",
-            "imageSrc": img3
-        },
-        {
-            "title": "Royal Rent",
-            "description": "Create an exclusive online platform dedicated to Digital Car Rental Web App.",
-            "live_link": "https://royal-rent-client.vercel.app/",
-            "client": "https://github.com/mutanim24/royal-rent-client",
-            "server": "https://github.com/mutanim24/royal-rent-server",
-            "imageSrc": img5
-        },
+
         {
             "title": "Easy Shop",
             "description": "Developed a website focused on Easy To Online Shopping",
@@ -167,6 +160,14 @@ export const content = {
             "client": "https://github.com/mahdee18/easy-shop",
             "server": "https://github.com/mahdee18/easy-shop",
             "imageSrc": img6
+        },
+        {
+            "title": "Thai Kitchen",
+            "description": "Create an exclusive online platform dedicated to Thai cuisine.",
+            "live_link": "https://thai-kitchen-d45d7.web.app/",
+            "client": "https://github.com/mahdee18/thai-kitchen-client",
+            "server": "https://github.com/mahdee18/thai-kitchen-server",
+            "imageSrc": img3
         }
     ]
 

@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { content } from './Content';
-import SectionTitle from './SectionTitile';
 import ProjectCard from './ProjectCard';
+import SectionTitle from './SectionTitile';
 
 const Work = () => {
-
     const { projects } = content;
+    const [displayedProjects, setDisplayedProjects] = useState(3); 
 
     useEffect(() => {
         AOS.init({
@@ -16,12 +16,15 @@ const Work = () => {
         });
     }, []);
 
+    const showAllProjects = () => {
+        setDisplayedProjects(projects.length); // Show all projects when the button is clicked
+    };
+
     return (
         <>
             <section className='section' id='work'>
                 <div className='container mx-auto py-64'>
                     <div className=''>
-
                         {/* Your introductory content */}
                         <div className='mb-10 lg:mb-0'>
                             <SectionTitle title={"My Latest"} subtitle={"Projects"}></SectionTitle>
@@ -29,31 +32,21 @@ const Work = () => {
                                 I showcase dynamic web applications that seamlessly integrate front-end and back-end technologies.
                                 Witness innovation and scalability as we explore the limitless possibilities of MERN technology in transforming the world of web development.
                             </p>
-                            <button className='btn btn-lg text-white border-0'>View All Projects</button>
                         </div>
-
                     </div>
                     {/* Project cards */}
                     <div className='grid md:grid-cols-3 gap-8 md:my-8 '>
-                        {projects.map((project, index) => (
+                        {projects.slice(0, displayedProjects).map((project, index) => (
                             <div key={index} className="group relative overflow-hidden border-2 border-white/50 rounded-xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                                 <ProjectCard project={project}></ProjectCard>
-                                {/* <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
-                                <img className="group-hover:scale-125 transition-all duration-500" src={project.imageSrc} alt="" />
-                                <div className="absolute bottom-0 left-0 right-0 text-center md:left-12 group-hover:bottom-24 transition-all duration-500 z-50 mb-6 md:text-left">
-                                    <span className="text-gradient py-4">{project.title}</span>
-                                </div>
-                                <div className="absolute bottom-0 left-0 right-0 text-center md:left-12 group-hover:bottom-10 transition-all duration-700 z-50 md:text-left opacity-0 group-hover:opacity-100">
-                                    <span className="text-sm text-white">
-                                        {project.description}
-                                    </span>
-                                    <br />
-                                    <span className="bg-accent py-2 px-3 rounded-lg">
-                                        <a href={project.previewLink} target="_blank" rel="noopener noreferrer">Preview</a>
-                                    </span>
-                                </div> */}
                             </div>
                         ))}
+                    </div>
+                    {/* View All Project Button */}
+                    <div className='text-center'>
+                        {displayedProjects < projects.length && (
+                            <button className='btn btn-lg text-white border-0' onClick={showAllProjects}>View All Projects</button>
+                        )}
                     </div>
                 </div>
             </section>
