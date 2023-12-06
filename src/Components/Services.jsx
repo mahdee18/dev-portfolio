@@ -40,7 +40,7 @@ const Services = () => {
           >
             <SectionTitle title={"What I"} subtitle={"Do"}></SectionTitle>
             <h3 className='font-secondary font-semibold uppercase leading-1 text-[36px] max-w-[455px] mb-16'>I'm a freelance frontend developer.</h3>
-            <button className='btn btn-lg border-0 text-white'>See my projects</button>
+            <a href={`#work`} className='btn btn-lg border-0 text-white'>See my projects</a>
           </div>
           <div>
             <div>
