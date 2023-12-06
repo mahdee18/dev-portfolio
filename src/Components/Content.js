@@ -17,6 +17,7 @@ import img2 from '../assets/Toy1.png';
 import img3 from '../assets/Thai1.png';
 import img4 from '../assets/NexusBank.png';
 import img5 from '../assets/RoyalRent.png';
+import img6 from '../assets/EasyShop.png';
 export const content = {
     skills: [
         {
@@ -121,7 +122,7 @@ export const content = {
     projects: [
         {
             "title": "Nexus Bank Ltd.",
-            "description": "Developed a website focused on Digital Banking Web Application.",
+            "description": "Developed a website focused on Digital Banking Services.",
             "client": "https://github.com/codewithsiam/nexus-bank-ltd-client",
             "server": "https://github.com/codewithsiam/nexus-bank-ltd-server",
             "live_link": "https://nexus-cc1a9.web.app/",
@@ -160,12 +161,12 @@ export const content = {
             "imageSrc": img5
         },
         {
-            "title": "Royal Rent",
-            "description": "Create an exclusive online platform dedicated to Digital Car Rental Web App.",
-            "live_link": "https://royal-rent-client.vercel.app/",
-            "client": "https://github.com/mutanim24/royal-rent-client",
-            "server": "https://github.com/mutanim24/royal-rent-server",
-            "imageSrc": img5
+            "title": "Easy Shop",
+            "description": "Developed a website focused on Easy To Online Shopping",
+            "live_link": "https://easy-shop-mu.vercel.app/",
+            "client": "https://github.com/mahdee18/easy-shop",
+            "server": "https://github.com/mahdee18/easy-shop",
+            "imageSrc": img6
         }
     ]
 

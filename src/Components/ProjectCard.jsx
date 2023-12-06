@@ -31,8 +31,8 @@ export default function ProjectCard({ project }) {
               {description}
             </p>
             <div className="flex justify-between py-4 gap-2">
-              <a className="btn w-1/2 py-3 px-2 bg-accent text-white font-bold" href={client}>Client</a>
-              <a href={server} className="btn w-1/2 py-3 px-2 bg-accent text-white font-bold">Server</a>
+              <a className="btn rounded-none w-1/2 py-3 px-2 bg-accent text-white font-bold" href={client}>Client</a>
+              <a href={server} className="btn rounded-none w-1/2 py-3 px-2 bg-accent text-white font-bold">Server</a>
             </div>
             <a href={live_link} target="_blank" className="inline-flex btn h-10 w-full items-center justify-center gap-2 text-white disabled:shadow-none rounded-none">
               <span>View Live</span>
