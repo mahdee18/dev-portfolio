@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import avater from '../assets/Profile.png';
-import resume from '../assets/Mahdee -Resume(updated).pdf'
+import resume from '../assets/Mahdee Resume (Frontend).pdf'
 import { FaGithub, FaFacebook, FaLinkedinIn, FaDownload } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 
@@ -58,7 +58,7 @@ const Banner = () => {
                             className='flex items-center max-w-max gap-x-6 mb-8 mx-auto lg:mx-0'
                         >
                             <a href="#contact" className='btn btn-lg border-0 text-white'>Contact me</a>
-                            <a href={resume} className='text-gradient btn-link no-underline' download={'Mahdee -Resumee.pdf'}>
+                            <a href={resume} className='text-gradient btn-link no-underline' download={'Mahdee -Resume.pdf'}>
                                 <FaDownload className='inline mr-2 text-white'></FaDownload>Download Resume
                             </a>
                         </div>
