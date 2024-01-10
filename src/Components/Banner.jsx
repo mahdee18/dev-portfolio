@@ -14,7 +14,7 @@ const Banner = () => {
     const googleDriveResumeLink = 'https://drive.google.com/file/d/1NwgfhuAp9MOQrdFFgIsFrM3kZ1llhYm5/view?usp=drive_link';
 
     return (
-        <div className='min-h-[85vh] lg:min-h-[78vh] flex items-center' id='home'>
+        <div className='min-h-[55vh] lg:min-h-[78vh] flex items-center' id='home'>
             <div className='container mx-auto'>
                 <div className='flex flex-col md:flex-row gap-y-8 lg:flex-row lg:items-center lg:gap-x-12'>
                     <div className='flex-1 font-secondary lg:text-left'>
@@ -59,7 +59,7 @@ const Banner = () => {
                             data-aos-delay='600'
                             className='flex items-center max-w-max gap-x-6 mb-8 mx-auto lg:mx-0'
                         >
-                            <a href="#contact" className='btn btn-lg border-0 text-white'>Contact me</a>
+                            <a href="#contact" className='btn lg:btn-lg border-0 text-white'>Contact me</a>
                             <a href={googleDriveResumeLink} className='text-gradient btn-link no-underline' target='_blank' rel='noopener noreferrer'>
                                 <FaDownload className='inline mr-2 text-white'></FaDownload>Download Resume
                             </a>
