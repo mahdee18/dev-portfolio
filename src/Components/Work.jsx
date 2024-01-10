@@ -45,7 +45,7 @@ const Work = () => {
                     {/* View All Project Button */}
                     <div className='text-center pt-6 md:pt-0'>
                         {displayedProjects < projects.length && (
-                            <button className='btn btn-lg text-white border-0' onClick={showAllProjects}>View All Projects</button>
+                            <button className='btn lg:btn-lg text-white border-0' onClick={showAllProjects}>View All Projects</button>
                         )}
                     </div>
                 </div>
