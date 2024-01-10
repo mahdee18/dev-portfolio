@@ -19,7 +19,7 @@ const Skills = () => {
     return false;
   });
   return (
-    <section className="mb-32 lg:pb-64 w-5/6 mx-auto" id="skills">
+    <section className="lg:mb-32 lg:pb-64 w-5/6 mx-auto" id="skills">
       <div className="text-start lg:text-center">
         <SectionTitle title={"My"} subtitle={"Skills"}></SectionTitle>
         <p className="text-gray-200 mt-3 text-lg">Mastering Technologies for Seamless Digital Experiences</p>

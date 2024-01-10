@@ -4,7 +4,7 @@ import SectionTitle from './SectionTitile';
 
 const Contact = () => {
     return (
-        <div id="contact" className='w-5/6 mx-auto py-32 lg:pt-96'>
+        <div id="contact" className='w-5/6 mx-auto lg:py-32 lg:pt-72'>
             <div>
                 <SectionTitle title='Get In' subtitle='Touch'></SectionTitle>
             </div>
