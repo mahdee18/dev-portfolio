@@ -7,7 +7,7 @@ const Header = () => {
 
             <div className='container mx-auto' id='header'>
                 <div className='flex justify-between items-center'>
-                    <a className='text-gradient font-bold lg:text-4xl sm:text-2xl' href="#">
+                    <a className='text-gradient font-bold lg:text-4xl sm:text-2xl' href="/">
                         Mahdee
                     </a>
                     <a href="#contact">

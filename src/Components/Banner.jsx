@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import avater from '../assets/Profile.png';
-import resume from '../assets/Mahdee Resume (Frontend).pdf'
 import { FaGithub, FaFacebook, FaLinkedinIn, FaDownload } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 
