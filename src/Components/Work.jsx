@@ -17,15 +17,14 @@ const Work = () => {
     }, []);
 
     const showAllProjects = () => {
-        setDisplayedProjects(projects.length); // Show all projects when the button is clicked
+        setDisplayedProjects(projects.length);
     };
 
     return (
         <>
             <section className='section' id='work'>
-                <div className='container mx-auto py-0 md:py-64'>
+                <div className='container mx-auto py-0'>
                     <div className=''>
-                        {/* Your introductory content */}
                         <div className='mb-10 lg:mb-0'>
                             <SectionTitle title={"My Latest"} subtitle={"Projects"}></SectionTitle>
                             <p className='max-w-xl mb-6'>
