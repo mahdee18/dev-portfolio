@@ -76,7 +76,7 @@ const Banner = () => {
                             <a href='https://www.linkedin.com/in/mahdee-al-amin-8b7134202/'>
                                 <FaLinkedinIn></FaLinkedinIn>
                             </a>
-                            <a href='https://web.facebook.com/mahdee.al.amin.09y'>
+                            <a href='https://web.facebook.com/mahdee.al.amin2010'>
                                 <FaFacebook></FaFacebook>
                             </a>
                         </div>
