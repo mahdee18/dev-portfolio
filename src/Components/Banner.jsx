@@ -10,8 +10,7 @@ const Banner = () => {
     useEffect(() => {
         AOS.init();
     }, []);
-
-    // New Google Drive link for the resume
+    
     const googleDriveResumeLink = 'https://drive.google.com/file/d/1NwgfhuAp9MOQrdFFgIsFrM3kZ1llhYm5/view?usp=drive_link';
 
     return (
