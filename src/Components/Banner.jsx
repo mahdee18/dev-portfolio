@@ -59,8 +59,8 @@ const Banner = () => {
                             data-aos-delay='600'
                             className='flex items-center max-w-max gap-x-6 mb-8 mx-auto lg:mx-0'
                         >
-                            <a href="#contact" className='btn lg:btn-lg border-0 text-white'>Contact me</a>
-                            <a href={googleDriveResumeLink} className='text-gradient btn-link no-underline' target='_blank' rel='noopener noreferrer'>
+                            <a href="#contact" className='btn border-0 text-white'>Contact me</a>
+                            <a href={googleDriveResumeLink} className='text-white border-0 btn-link no-underline btn ' target='_blank' rel='noopener noreferrer'>
                                 <FaDownload className='inline mr-2 text-white'></FaDownload>Download Resume
                             </a>
                         </div>
@@ -84,10 +84,11 @@ const Banner = () => {
                     <div
                         data-aos='fade-down'
                         data-aos-delay='500'
-                        className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[480px]'
+                        className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[480px] '
                     >
                         <img src={avater} alt='' />
                     </div>
+
                 </div>
             </div>
         </div>
