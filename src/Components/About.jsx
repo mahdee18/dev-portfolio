@@ -17,9 +17,7 @@ const About = () => {
     return (
         <section className='section w-full mx-auto lg:w-5/6 lg:my-32' id='about'>
             <div className='flex flex-col md:flex-row'>
-                <div className='md:w-1/2'>
-                    <div className='w-full bg-about bg-contain bg-no-repeat h-[320px] md:h-[640px] mix-blend-lighten bg-top'></div>
-                </div>
+                
                 <div
                     ref={ref}
                     data-aos='fade-left'
