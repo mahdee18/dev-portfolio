@@ -7,7 +7,9 @@ import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
 
 const Banner = () => {
-
+    useEffect(() => {
+        AOS.init();
+    }, []);
     
     const googleDriveResumeLink = 'https://drive.google.com/file/d/1NwgfhuAp9MOQrdFFgIsFrM3kZ1llhYm5/view?usp=drive_link';
 
