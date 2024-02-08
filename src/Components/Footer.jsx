@@ -50,6 +50,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
+                
                 <hr className="my-8 border-slate-700" />
                 <p className="text-sm text-center">© {new Date().getFullYear()} Mahdee All rights reserved.</p>
             </div>
