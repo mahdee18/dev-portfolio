@@ -9,6 +9,7 @@ const Header = () => {
                     <a className='text-gradient font-bold lg:text-4xl sm:text-2xl' href="/">
                         Mahdee
                     </a>
+                    
                     <a href="#contact">
                         <button className='btn lg:btn-lg sm:btn-sm rounded-full text-white border-0'>Work With Me</button>
                     </a>
