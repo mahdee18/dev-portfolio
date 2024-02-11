@@ -49,6 +49,7 @@ const Footer = () => {
                             <li><a href="https://github.com/mahdee18" target='_blank' className="hover:text-gray-400 text-xl"><FaGithub /></a></li>
                         </ul>
                     </div>
+                    
                 </div>
                 <hr className="my-8 border-slate-700" />
                 <p className="text-sm text-center">© {new Date().getFullYear()} Mahdee All rights reserved.</p>
