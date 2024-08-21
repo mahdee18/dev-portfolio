@@ -11,9 +11,9 @@ const Services = () => {
 
   const services = [
     {
-      name: 'Web Design',
+      name: 'Full Stack Development',
       description:
-        'Immerse yourself in visually captivating and user-friendly website designs. I craft seamless digital experiences that leave a lasting impression, ensuring your online presence reflects your unique identity.',
+        'Building complete web solutions from scratch, I leverage the MERN stack (MongoDB, Express.js, React.js, Node.js) to create robust and scalable applications. My approach ensures seamless integration between frontend and backend, delivering high-performance solutions that meet diverse needs.',
       link: 'Learn More',
     },
     {
@@ -23,11 +23,11 @@ const Services = () => {
       link: 'Learn More',
     },
     {
-      name: 'Product Branding',
+      name: 'Frontend Development',
       description:
-        ' Elevate your brand identity with my strategic product branding services. I blend creativity with market insights to develop compelling brand stories and visual identities.I ensure your brand stands out and resonates with your target audience.',
+        ' Transforming designs into interactive, user-centric interfaces is my specialty. I use modern technologies like React.js and CSS frameworks to craft visually appealing and responsive websites that provide an exceptional user experience.',
       link: 'Learn More',
-    },
+    }
   ];
 
   return (

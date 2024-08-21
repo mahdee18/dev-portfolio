@@ -23,7 +23,7 @@ const Footer = () => {
                                 <MdOutlineMail />
                             </div>
                             <p className="md:text-base text-sm  break-words">
-                                mahdeec12@gmail.com
+                                mahdee.contact@gmail.com
                             </p>
                         </div>
                     </div>
