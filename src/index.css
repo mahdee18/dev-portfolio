@@ -39,8 +39,13 @@
   This is where we build out custom, reusable component classes.
 */
 @layer components {
-    .active {
-    @apply bg-accent text-white rounded-full scale-125 -translate-y-2 shadow-lg shadow-accent/50;
+
+  .active {
+    @apply bg-accent text-white rounded-full shadow-lg shadow-accent/50;
+  }
+
+  .active div {
+    @apply scale-100 -translate-y-0;
   }
   /* --- Gradient Text Utility --- */
   .text-gradient {

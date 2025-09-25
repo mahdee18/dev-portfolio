@@ -122,67 +122,64 @@ export const content = {
 
   projects: [
     {
-        "id": 1,
-      "title": "Oxford Coach",
-      "description": "A full-stack web application focused on modern digital Bus ticketing platform.",
-      "image": img00,
-      "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-      "live_link": "https://oxford-coach-client.vercel.app/",
-      "github_link": "https://github.com/mutanim24/oxford-coach-client"
-    },
-    {
-        "id": 2,
+      "id": 1,
       "title": "Nexus Bank Ltd.",
       "description": "A full-stack web application focused on modern digital banking services.",
       "image": img4,
       "tags": ["React", "Node.js", "Express", "MongoDB", "Firebase", "Tailwind CSS"],
       "live_link": "https://nexus-cc1a9.web.app/",
-      "github_link": "https://github.com/codewithsiam/nexus-bank-ltd-client"
+      "github_link": "https://github.com/codewithsiam/nexus-bank-ltd-client",
+      "github_server_link": "https://github.com/codewithsiam/nexus-bank-ltd-server" // <-- ADDED
     },
     {
-        "id": 3,
+      "id": 2,
       "title": "Royal Rent",
       "description": "An exclusive online platform dedicated to a digital car rental web application.",
       "image": img5,
       "tags": ["React", "Node.js", "Express", "MongoDB", "JWT", "Vercel"],
       "live_link": "https://royal-rent-client.vercel.app/",
-      "github_link": "https://github.com/mutanim24/royal-rent-client"
+      "github_link": "https://github.com/mutanim24/royal-rent-client",
+      "github_server_link": "https://github.com/mutanim24/royal-rent-server" // <-- ADDED
     },
     {
-        "id": 4,
+      "id": 3,
       "title": "Capture Academy",
       "description": "A MERN stack website focused on photography education and summer camps.",
       "image": img1,
       "tags": ["React", "Node.js", "Express", "MongoDB", "Firebase", "JWT"],
       "live_link": "https://capture-academy-1a91f.web.app/",
-      "github_link": "https://github.com/mahdee18/capture-academy-client"
+      "github_link": "https://github.com/mahdee18/capture-academy-client",
+      "github_server_link": "https://github.com/mahdee18/capture-academy-server" // <-- ADDED
     },
     {
-        "id": 5,
+      "id": 4,
       "title": "Smart Toy Market",
       "description": "An engaging e-commerce platform for purchasing educational toys online.",
       "image": img2,
       "tags": ["React", "Node.js", "Express", "MongoDB", "Firebase Auth"],
       "live_link": "https://smarttoymarket.web.app/",
-      "github_link": "https://github.com/mahdee18/smart-toy-market-client"
+      "github_link": "https://github.com/mahdee18/smart-toy-market-client",
+      "github_server_link": "https://github.com/mahdee18/smart-toy-market-server" // <-- ADDED
     },
     {
-        "id": 6,
+      "id": 5,
       "title": "Easy Shop",
       "description": "A clean and modern e-commerce website for a seamless online shopping experience.",
       "image": img6,
       "tags": ["React", "Next.js", "Stripe", "Tailwind CSS", "Vercel"],
       "live_link": "https://easy-shop-mu.vercel.app/",
       "github_link": "https://github.com/mahdee18/easy-shop"
+      // No server link for this one, so the button won't show.
     },
     {
-        "id": 7,
+      "id": 6,
       "title": "Thai Kitchen",
       "description": "An exclusive online platform dedicated to Thai cuisine, chefs, and recipes.",
       "image": img3,
       "tags": ["React", "Firebase", "Node.js", "Express", "Tailwind CSS"],
       "live_link": "https://thai-kitchen-d45d7.web.app/",
-      "github_link": "https://github.com/mahdee18/thai-kitchen-client"
+      "github_link": "https://github.com/mahdee18/thai-kitchen-client",
+      "github_server_link": "https://github.com/mahdee18/thai-kitchen-server" // <-- ADDED
     }
   ]
 

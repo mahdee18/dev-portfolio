@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react'; // 1. Import useState
+import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { content } from './Content';
 import SectionTitle from './SectionTitile';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+// 1. Import the FaServer icon
+import { FaGithub, FaExternalLinkAlt, FaServer } from 'react-icons/fa';
 
 const Work = () => {
     const { projects } = content;
-
-    // 2. Add state to control the number of visible projects
     const [visibleProjects, setVisibleProjects] = useState(3);
 
     useEffect(() => {
@@ -20,7 +19,6 @@ const Work = () => {
         });
     }, []);
 
-    // 3. Create a function to show all projects
     const showMoreProjects = () => {
         setVisibleProjects(projects.length);
     };
@@ -37,7 +35,6 @@ const Work = () => {
 
                 {/* Projects Container */}
                 <div className="space-y-20 lg:space-y-28">
-                    {/* 4. Use .slice() to only map over the visible projects */}
                     {projects.slice(0, visibleProjects).map((project, index) => (
                         <div 
                             key={index} 
@@ -75,32 +72,50 @@ const Work = () => {
                                     {project.description}
                                 </p>
                                 
-                                <div className="flex items-center gap-4">
+                                <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
+                                    {/* 2. Optimized Live Demo Button with better styling */}
                                     <a 
                                         href={project.live_link} 
                                         target="_blank" 
                                         rel="noopener noreferrer" 
-                                        className='btn btn-lg bg-accent hover:bg-accent-hover text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
+                                        className='btn bg-accent hover:bg-accent-hover text-white font-bold h-[56px] px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 shadow-lg hover:shadow-accent/50'
                                     >
                                         <FaExternalLinkAlt />
                                         <span>Live Demo</span>
                                     </a>
-                                    <a 
-                                        href={project.github_link} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
-                                        className='flex items-center gap-2 text-white/80 hover:text-accent font-semibold transition-colors duration-300 group'
-                                    >
-                                        <FaGithub size={24} className="group-hover:scale-110 transition-transform"/>
-                                        <span>View Code</span>
-                                    </a>
+                                    
+                                    {/* 3. Grouped Code Links */}
+                                    <div className="flex items-center gap-x-6">
+                                        <a 
+                                            href={project.github_link} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className='flex items-center gap-2 text-white/80 hover:text-accent font-semibold transition-colors duration-300 group'
+                                        >
+                                            <FaGithub size={24} className="group-hover:scale-110 transition-transform"/>
+                                            <span>Client</span>
+                                        </a>
+                                        
+                                        {/* 4. Conditionally render the Server-Side link */}
+                                        {project.github_server_link && (
+                                            <a 
+                                                href={project.github_server_link} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer" 
+                                                className='flex items-center gap-2 text-white/80 hover:text-accent font-semibold transition-colors duration-300 group'
+                                            >
+                                                <FaServer size={24} className="group-hover:scale-110 transition-transform"/>
+                                                <span>Server</span>
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                {/* 5. Conditionally render the "Show More" button */}
+                {/* "Show More" button remains the same */}
                 {visibleProjects < projects.length && (
                     <div className="text-center mt-16" data-aos="fade-up">
                         <button 
