@@ -105,7 +105,7 @@ const Work = () => {
                     <div className="text-center mt-16" data-aos="fade-up">
                         <button 
                             onClick={showMoreProjects}
-                            className='btn border-2 border-accent bg-transparent text-accent hover:bg-accent hover:text-white rounded-full transition-all duration-300 px-8 py-3 font-semibold'
+                            className='btn border-2 border-accent bg-transparent text-black hover:bg-accent hover:text-white rounded-full transition-all duration-300 px-8 py-3 font-semibold'
                         >
                             Show More Projects
                         </button>
