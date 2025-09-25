@@ -10,7 +10,7 @@ import Footer from './Footer';
 import Skills from './Skills';
 
 const Home = () => {
-    return (
+    return ( 
         <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
             <Header />
             <Banner />

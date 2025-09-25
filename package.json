@@ -20,11 +20,14 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.5.2",
+    "react-parallax-tilt": "^1.7.309",
     "react-router-dom": "^6.14.0",
     "react-scroll": "^1.8.9",
     "react-tabs": "^6.0.1",
+    "react-tsparticles": "^2.12.2",
     "react-type-animation": "^3.1.0",
-    "sort-by": "^1.2.0"
+    "sort-by": "^0.0.2",
+    "tsparticles": "^3.9.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
