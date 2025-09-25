@@ -12,6 +12,7 @@ import reactjs from "../assets/Skills/react.png";
 import tailwind from "../assets/Skills/tailwind.png";
 import vscode from "../assets/Skills/vscode.png";
 
+import img00 from '../assets/BusGo.png';
 import img1 from '../assets/Capture1.png';
 import img2 from '../assets/Toy1.png';
 import img3 from '../assets/Thai1.png';
@@ -119,56 +120,70 @@ export const content = {
     ],
 
 
-    projects: [
-        {
-            "title": "Nexus Bank Ltd.",
-            "description": "Developed a website focused on Digital Banking Services.",
-            "client": "https://github.com/codewithsiam/nexus-bank-ltd-client",
-            "server": "https://github.com/codewithsiam/nexus-bank-ltd-server",
-            "live_link": "https://nexus-cc1a9.web.app/",
-            "imageSrc": img4
-        },
-        {
-            "title": "Royal Rent",
-            "description": "Create an exclusive online platform dedicated to Digital Car Rental Web App.",
-            "live_link": "https://royal-rent-client.vercel.app/",
-            "client": "https://github.com/mutanim24/royal-rent-client",
-            "server": "https://github.com/mutanim24/royal-rent-server",
-            "imageSrc": img5
-        },
-        {
-            "title": "Capture Academy",
-            "description": "Developed a website focused on photography education and summer camp.",
-            "live_link": "https://capture-academy-1a91f.web.app/",
-            "client": "https://github.com/mahdee18/capture-academy-client",
-            "server": "https://github.com/mahdee18/capture-academy-server",
-            "imageSrc": img1
-        },
-        {
-            "title": "Smart Toy Market",
-            "description": "Create an engaging platform for purchasing educational toys.",
-            "live_link": "https://smarttoymarket.web.app/",
-            "client": "https://github.com/mahdee18/smart-toy-market-client",
-            "server": "https://github.com/mahdee18/smart-toy-market-server",
-            "imageSrc": img2
-        },
-
-        {
-            "title": "Easy Shop",
-            "description": "Developed a website focused on Easy To Online Shopping",
-            "live_link": "https://easy-shop-mu.vercel.app/",
-            "client": "https://github.com/mahdee18/easy-shop",
-            "server": "https://github.com/mahdee18/easy-shop",
-            "imageSrc": img6
-        },
-        {
-            "title": "Thai Kitchen",
-            "description": "Create an exclusive online platform dedicated to Thai cuisine.",
-            "live_link": "https://thai-kitchen-d45d7.web.app/",
-            "client": "https://github.com/mahdee18/thai-kitchen-client",
-            "server": "https://github.com/mahdee18/thai-kitchen-server",
-            "imageSrc": img3
-        }
-    ]
+  projects: [
+    {
+        "id": 1,
+      "title": "Oxford Coach",
+      "description": "A full-stack web application focused on modern digital Bus ticketing platform.",
+      "image": img00,
+      "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+      "live_link": "https://oxford-coach-client.vercel.app/",
+      "github_link": "https://github.com/mutanim24/oxford-coach-client"
+    },
+    {
+        "id": 2,
+      "title": "Nexus Bank Ltd.",
+      "description": "A full-stack web application focused on modern digital banking services.",
+      "image": img4,
+      "tags": ["React", "Node.js", "Express", "MongoDB", "Firebase", "Tailwind CSS"],
+      "live_link": "https://nexus-cc1a9.web.app/",
+      "github_link": "https://github.com/codewithsiam/nexus-bank-ltd-client"
+    },
+    {
+        "id": 3,
+      "title": "Royal Rent",
+      "description": "An exclusive online platform dedicated to a digital car rental web application.",
+      "image": img5,
+      "tags": ["React", "Node.js", "Express", "MongoDB", "JWT", "Vercel"],
+      "live_link": "https://royal-rent-client.vercel.app/",
+      "github_link": "https://github.com/mutanim24/royal-rent-client"
+    },
+    {
+        "id": 4,
+      "title": "Capture Academy",
+      "description": "A MERN stack website focused on photography education and summer camps.",
+      "image": img1,
+      "tags": ["React", "Node.js", "Express", "MongoDB", "Firebase", "JWT"],
+      "live_link": "https://capture-academy-1a91f.web.app/",
+      "github_link": "https://github.com/mahdee18/capture-academy-client"
+    },
+    {
+        "id": 5,
+      "title": "Smart Toy Market",
+      "description": "An engaging e-commerce platform for purchasing educational toys online.",
+      "image": img2,
+      "tags": ["React", "Node.js", "Express", "MongoDB", "Firebase Auth"],
+      "live_link": "https://smarttoymarket.web.app/",
+      "github_link": "https://github.com/mahdee18/smart-toy-market-client"
+    },
+    {
+        "id": 6,
+      "title": "Easy Shop",
+      "description": "A clean and modern e-commerce website for a seamless online shopping experience.",
+      "image": img6,
+      "tags": ["React", "Next.js", "Stripe", "Tailwind CSS", "Vercel"],
+      "live_link": "https://easy-shop-mu.vercel.app/",
+      "github_link": "https://github.com/mahdee18/easy-shop"
+    },
+    {
+        "id": 7,
+      "title": "Thai Kitchen",
+      "description": "An exclusive online platform dedicated to Thai cuisine, chefs, and recipes.",
+      "image": img3,
+      "tags": ["React", "Firebase", "Node.js", "Express", "Tailwind CSS"],
+      "live_link": "https://thai-kitchen-d45d7.web.app/",
+      "github_link": "https://github.com/mahdee18/thai-kitchen-client"
+    }
+  ]
 
 };

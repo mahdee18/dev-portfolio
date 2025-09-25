@@ -1,77 +1,90 @@
-import React, { useState } from "react";
-import { content } from "./Content";
-import SectionTitle from "./SectionTitile";
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Tilt from 'react-parallax-tilt'; // For the 3D hover effect
+import { content } from './Content';
+import SectionTitle from './SectionTitile';
 
 const Skills = () => {
-  const { skills } = content;
-  const [activeTab, setActiveTab] = useState("Frontend");
+    const { skills } = content;
+    const [activeTab, setActiveTab] = useState('Frontend');
 
-  const filteredSkills = skills.filter((skill) => {
-    if (activeTab === "Frontend" && skill.type === "frontend") {
-      return true;
-    }
-    if (activeTab === "Backend" && skill.type === "backend") {
-      return true;
-    }
-    if (activeTab === "Others" && skill.type === "others") {
-      return true;
-    }
-    return false;
-  });
-  return (
-    <section className="lg:mb-32 lg:pb-64 w-5/6 mx-auto" id="skills">
-      <div className="text-start lg:text-center">
-        <SectionTitle title={"My"} subtitle={"Skills"}></SectionTitle>
-        <p className="text-gray-200 mt-3 text-lg">Mastering Technologies for Seamless Digital Experiences</p>
-      </div>
-      <div className="mt-6 mb-8">
-        <div className="flex justify-center space-x-6">
-          <button
-            className={`tabButton ${activeTab === "Frontend" ? "activeTab" : ""}`}
-            onClick={() => setActiveTab("Frontend")}
-          >
-            Frontend
-          </button>
-          <button
-            className={`tabButton ${activeTab === "Backend" ? "activeTab" : ""}`}
-            onClick={() => setActiveTab("Backend")}
-          >
-            Backend
-          </button>
-          <button
-            className={`tabButton ${activeTab === "Others" ? "activeTab" : ""}`}
-            onClick={() => setActiveTab("Others")}
-          >
-            Others
-          </button>
-        </div>
-      </div>
-      <div className="md:container py-6">
-        <div className="grid md:grid-cols-3 gap-4 ">
-          {filteredSkills.map((skill, i) => (
-            <div
-              key={i}
-              data-aos="fade-up"
-              data-aos-delay={i * 300}
-              className="bg-slate-900 sm:cursor-pointer relative group w-full flex items-center gap-5 px-5 py-3 max-w-sm rounded-md border-2 border-slate-800"
-            >
-              <div className="w-1/5">
-                <img
-                  src={skill.logo}
-                  alt="..."
-                  className="group-hover:scale-125 duration-200"
-                />
-              </div>
-              <div className="w-4/5">
-                <h6 className="text-2xl">{skill.name}</h6>
-                <p className="italic">{skill.para}</p>
-              </div>
+    useEffect(() => {
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+    }, []);
+
+    const filteredSkills = skills.filter((skill) => {
+        if (activeTab === 'Frontend') return skill.type === 'frontend';
+        if (activeTab === 'Backend') return skill.type === 'backend';
+        if (activeTab === 'Others') return skill.type === 'others';
+        return false;
+    });
+
+    const categories = ['Frontend', 'Backend', 'Others'];
+
+    return (
+        <section className='py-20 lg:py-32' id='skills'>
+            <div className='container mx-auto px-4'>
+                {/* Section Header */}
+                <div className='text-center mb-12' data-aos='fade-up'>
+                    <SectionTitle title={"My Expertise"} subtitle={"Technologies I Use"} />
+                    <p className='max-w-2xl mx-auto text-white/80 mt-4'>
+                        A curated list of technologies and tools I excel at, enabling me to build seamless and robust digital experiences from front to back.
+                    </p>
+                </div>
+
+                {/* Filter Tabs */}
+                <div className='flex justify-center flex-wrap gap-4 mb-12' data-aos='fade-up' data-aos-delay='200'>
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActiveTab(category)}
+                            className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 ${
+                                activeTab === category
+                                    ? 'bg-accent text-white shadow-lg'
+                                    : 'bg-primary/40 text-white/70 hover:bg-accent/80 hover:text-white'
+                            }`}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
+
+                {/* Skills Grid */}
+                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 lg:gap-8'>
+                    {filteredSkills.map((skill, i) => (
+                        <div key={i} data-aos='fade-up' data-aos-delay={`${i * 100}`}>
+                            <Tilt
+                                glareEnable={true}
+                                glareMaxOpacity={0.2}
+                                glareColor="#ffffff"
+                                glarePosition="all"
+                                scale={1.1}
+                            >
+                                <div className='group relative bg-primary/40 p-6 rounded-2xl border border-white/10 h-full flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-accent hover:bg-accent/10'>
+                                    {/* Subtle glow effect */}
+                                    <div className='absolute -inset-px bg-accent rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300'></div>
+                                    
+                                    <div className='relative w-16 h-16 mb-4'>
+                                        <img
+                                            src={skill.logo}
+                                            alt={`${skill.name} logo`}
+                                            className='w-full h-full object-contain group-hover:scale-110 transition-transform duration-300'
+                                        />
+                                    </div>
+                                    <h6 className='relative text-lg font-semibold text-white'>{skill.name}</h6>
+                                </div>
+                            </Tilt>
+                        </div>
+                    ))}
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default Skills;

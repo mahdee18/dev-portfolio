@@ -1,104 +1,103 @@
+/*
+  ================================================================
+  1. TAILWIND DIRECTIVES
+  ================================================================
+  These are necessary for Tailwind to work.
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-  background: linear-gradient(92.23deg,
-      #ff56f6 21.43%,
-      #b936ee 50.63%,
-      #3bace2 100%,
-      #406aff 117.04%);
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
-}
-
-.btn:hover {
-  background: linear-gradient(92.23deg,
-      #406aff 21.43%,
-      #3bace2 50.63%,
-      #b936ee 100%,
-      #ff56f6 117.04%);
-}
-
-.gradient,
-.active {
-  background: linear-gradient(92.23deg,
-      #406aff 21.43%,
-      #3bace2 50.63%,
-      #b936ee 100%,
-      #ff56f6 117.04%);
-}
-
-.active {
-  color: #fff;
-  padding: 10px;
-  border-radius: 100%;
-}
-
+/*
+  ================================================================
+  2. BASE LAYER
+  ================================================================
+  Here we define the default styles for basic HTML elements.
+  This is for global typography, colors, etc.
+*/
 @layer base {
   body {
-    @apply font-secondary text-lg leading-8 text-white;
+    @apply bg-primary font-secondary text-lg leading-8 text-white;
   }
-
   .h2 {
-    @apply  text-[32px] mb-6 tracking-[10%] uppercase;
+    /* Reduced tracking for a more professional look */
+    @apply text-[32px] mb-6 tracking-wider uppercase;
   }
-
   .h3 {
-    @apply  font-semibold text-[26px] mb-6 leading-[46px];
+    @apply font-semibold text-[26px] mb-6 leading-[46px];
+  }
+  .section {
+    /* Using min-h-screen is often more flexible than h-screen */
+    @apply py-16 lg:py-24 flex items-center min-h-screen;
+  }
+}
+
+/*
+  ================================================================
+  3. COMPONENTS LAYER
+  ================================================================
+  This is where we build out custom, reusable component classes.
+*/
+@layer components {
+  
+  /* --- Gradient Text Utility --- */
+  .text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3] transition-all duration-300;
   }
 
+  /* --- Button Styles --- */
+  /* Base button style (can be overridden by more specific classes) */
   .btn {
-    @apply rounded-full text-white font-medium;
+    @apply rounded-full text-white font-medium cursor-pointer;
+    background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
+    box-shadow: 0px 4px 100px rgba(255, 86, 246, 0.51);
+    transition: all 0.3s ease-in-out;
+  }
+  .btn:hover {
+    background: linear-gradient(92.23deg, #406aff 21.43%, #3bace2 50.63%, #b936ee 100%, #ff56f6 117.04%);
+    transform: scale(1.05);
   }
 
+  /* Button size modifiers */
   .btn-sm {
-    @apply h-[28px] px-6 border-0 text-white text-sm;
+    @apply h-[48px] px-6 text-sm;
   }
-
   .btn-lg {
-    color: white;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    border-radius: 5%;
-    font-weight: 600;
-    border: none;
-    transition: background-color 0.3s, color 0.3s;
+    @apply h-[56px] px-10 text-base;
   }
-
   .btn-link {
     @apply text-base;
   }
 
-  .text-gradient {
-    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3];
+  /* --- Advanced Contact Form Inputs --- */
+  /* This is the new, required code for the advanced contact form */
+  .custom-input {
+    @apply block w-full bg-white/5 border-2 border-white/20 rounded-lg px-4 py-3 text-white transition-all duration-300 outline-none focus:border-accent;
   }
-
-  .section {
-    @apply py-8 lg:py-24 lg:h-screen flex items-center;
+  .custom-label {
+    @apply absolute left-4 top-3.5 text-white/60 transition-all duration-300 pointer-events-none;
+    /* State for when the input has text or is focused */
+    @apply peer-focus:-translate-y-[22px] peer-focus:text-xs peer-focus:text-accent peer-focus:px-2 peer-focus:bg-white;
+    @apply peer-[:not(:placeholder-shown)]:-translate-y-[22px] peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:bg-primary;
   }
 }
 
-/* CSS for tab */
-
-.tabButton {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ccc;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5%;
-  font-weight: 600;
-  transition: background-color 0.3s, color 0.3s;
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5); /* Inactive dot color */
+  width: 10px;
+  height: 10px;
+  transition: background-color 0.3s;
 }
 
-.activeTab {
-  background: linear-gradient(92.23deg,
-      #406aff 21.43%,
-      #3bace2 50.63%,
-      #b936ee 100%,
-      #ff56f6 117.04%);
-  color: #fff;
-  /* Active tab text color */
-  border-color: #007bff;
-  /* Border color for active tab */
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #4F46E5; /* Your ACCENT color */
+}
+@layer utilities {
+  /* These are required for the "smart" footer's staggered animation */
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
 }

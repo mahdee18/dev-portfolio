@@ -1,82 +1,90 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+// Icons for each service
+import { FaCode, FaLaptopCode, FaReact } from 'react-icons/fa';
 import { BsArrowUpRight } from 'react-icons/bs';
 import SectionTitle from './SectionTitile';
 
 const Services = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+    useEffect(() => {
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+    }, []);
 
-  const services = [
-    {
-      name: 'Full Stack Development',
-      description:
-        'Building complete web solutions from scratch, I leverage the MERN stack (MongoDB, Express.js, React.js, Node.js) to create robust and scalable applications. My approach ensures seamless integration between frontend and backend, delivering high-performance solutions that meet diverse needs.',
-      link: 'Learn More',
-    },
-    {
-      name: 'Web Development',
-      description:
-        'Transforming ideas into interactive and responsive websites is my expertise. I breathe life into designs, employing cutting-edge technologies to create robust, high-performance websites that engage and delight users.',
-      link: 'Learn More',
-    },
-    {
-      name: 'Frontend Development',
-      description:
-        ' Transforming designs into interactive, user-centric interfaces is my specialty. I use modern technologies like React.js and CSS frameworks to craft visually appealing and responsive websites that provide an exceptional user experience.',
-      link: 'Learn More',
-    }
-  ];
+    // Services data with added icons for visual appeal
+    const services = [
+        {
+            icon: <FaCode size={40} />,
+            name: 'Full Stack Development',
+            description:
+                'Building complete web solutions from database to UI. I leverage the MERN stack to create robust, scalable, and high-performance applications with seamless integration.',
+            link: '#', // Placeholder link
+        },
+        {
+            icon: <FaLaptopCode size={40} />,
+            name: 'Web Development',
+            description:
+                'Transforming your ideas into interactive and responsive websites. I focus on creating robust, high-performance web experiences that engage and delight users.',
+            link: '#', // Placeholder link
+        },
+        {
+            icon: <FaReact size={40} />,
+            name: 'Frontend Development',
+            description:
+                'Crafting beautiful and intuitive user interfaces. I specialize in modern technologies like React to build visually appealing and highly responsive user experiences.',
+            link: '#', // Placeholder link
+        },
+    ];
 
-  return (
-    <section className='section lg:pt-48' id='services'>
-      <div className='container mx-auto'>
-        <div className='flex flex-col lg:flex-row'>
-          <div
-            className='flex-1 lg:bg-services lg:bg-bottom lg:bg-no-repeat mix-blend-lighten lg:mb-12 lg:mb-0'
-            data-aos='fade-right'
-          >
-            <SectionTitle title={"What I"} subtitle={"Do"}></SectionTitle>
-            <h3 className='font-secondary font-semibold uppercase leading-1 text-[36px] max-w-[455px] mb-16'>I'm a freelance frontend developer.</h3>
-            <a href={`#work`} className='btn lg:btn-lg border-0 text-white'>See my projects</a>
-          </div>
-          <div>
-            <div>
-              {services.map((service, index) => {
-                const { name, description, link } = service;
-                return (
-                  <div
-                    className=' border-white/20 h-[146px] mt-4 mb-[38px] flex'
-                    key={index}
-                    data-aos='fade-left'
-                    data-aos-delay={index * 100}
-                  >
-                    <div className='max-w-[476px]'>
-                      <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-6'>{name}</h4>
-                      <p className='font-secondary leading-tight'>{description}</p>
-                    </div>
-                    <div className='flex flex-col flex-1 items-end'>
-                      <a
-                        className='btn btn-sm w-9 h-9 mb-[42px] flex rounded-full justify-center items-center text-white'
-                        href='#'
-                      >
-                        <BsArrowUpRight />
-                      </a>
-                      <a href='#' className='text-gradient text-sm'>
-                        {link}
-                      </a>
-                    </div>
-                  </div>
-                );
-              })}
+    return (
+        <section className='py-20 lg:py-32' id='services'>
+            <div className='container mx-auto px-4'>
+                {/* Section Header */}
+                <div className='text-center mb-12' data-aos='fade-up'>
+                    <SectionTitle title={"What I Do"} subtitle={"My Services"} />
+                    <p className='max-w-2xl mx-auto text-white/80 mt-4'>
+                        I provide end-to-end web development services, turning complex problems into elegant, user-friendly digital solutions.
+                    </p>
+                </div>
+
+                {/* Services Grid */}
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                    {services.map((service, index) => (
+                        <div
+                            key={index}
+                            data-aos='fade-up'
+                            data-aos-delay={`${index * 100}`}
+                            className='group relative flex flex-col h-full bg-primary/40 p-8 rounded-2xl border border-white/10 transition-all duration-300 hover:border-accent hover:-translate-y-2'
+                        >
+                            {/* Icon */}
+                            <div className='text-accent mb-6'>{service.icon}</div>
+                            
+                            {/* Title */}
+                            <h4 className='text-xl font-bold text-white mb-4'>{service.name}</h4>
+                            
+                            {/* Description */}
+                            <p className='text-white/80 leading-relaxed mb-6 flex-grow'>
+                                {service.description}
+                            </p>
+                            
+                            {/* Learn More Link */}
+                            <a
+                                href={service.link}
+                                className='flex items-center gap-x-2 text-accent font-semibold'
+                            >
+                                <span>Learn More</span>
+                                <BsArrowUpRight className='transform transition-transform duration-300 group-hover:translate-x-1' />
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
-export default Services
+export default Services;

@@ -3,62 +3,90 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
-import SectionTitle from './SectionTitile';
+
+// Assuming SectionTitle is a reusable component for headings
+import SectionTitle from './SectionTitile'; 
+// Make sure this path is correct for your project structure
+import aboutImage from '../assets/avatar.png'; 
 
 const About = () => {
-    const [ref, inView] = useInView({
-        threshold: 0.5,
+    // This hook is great for triggering the CountUp animation only when visible
+    const { ref, inView } = useInView({
+        threshold: 0.3, // Start animation when 30% of the element is visible
+        triggerOnce: true, // Animate only once
     });
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+        });
     }, []);
 
     return (
-        <section className='section w-full mx-auto lg:w-5/6 lg:my-32' id='about'>
-            <div className='flex flex-col md:flex-row'>
-                <div className='md:w-1/2'>
-                    <div className='w-full bg-about bg-contain bg-no-repeat h-[320px] md:h-[640px] mix-blend-lighten bg-top'></div>
+        <section className='py-20 lg:py-32' id='about'>
+            <div className='container mx-auto px-4'>
+                {/* Section Title */}
+                <div data-aos='fade-up'>
+                   <SectionTitle title={"About"} subtitle={"Me"}></SectionTitle>
                 </div>
-                <div
-                    ref={ref}
-                    data-aos='fade-left'
-                    data-aos-delay='300'
-                    className='md:w-1/2 w-full lg:mt-4 lg:pl-8 md:pl-4'
-                >
-                    <div className='flex flex-col px-4 py-4 md:py-0 justify-center md:h-[640px]'>
-                        <div className='mb-8'>
-                            <SectionTitle title={"About"} subtitle={"Me"}></SectionTitle>
-                            <h3 className='h3 my-3'>I'm a freelance Frontend Developer.</h3>
-                            <p className='w-full'>
-                                Be passionate about web development and design. I would like to have a new-paced
-                                organization where technical skills and creative thinking are useful as well as being able to
-                                share my ability to learn quickly and discover new things as a web developer.
-                            </p>
+
+                {/* Main Content Grid */}
+                <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-12'>
+                    
+                    {/* Image Column */}
+                    <div data-aos='fade-right' className='flex justify-center'>
+                        <div className='relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]'>
+                            {/* Accent border/glow effect */}
+                            <div className='absolute inset-0 border-4 border-accent rounded-2xl transform rotate-6 transition-transform duration-500 hover:rotate-3'></div>
+                            <img 
+                                src={aboutImage} 
+                                alt="Mahdee Al Amin" 
+                                className='relative w-full h-full object-cover rounded-2xl shadow-2xl' 
+                            />
                         </div>
-                        <div className='flex flex-col md:flex-row md:justify-between'>
-                            <div className='mb-6 md:mb-0 md:mr-6'>
-                                <div className='text-[28px] font-tertiary text-gradient my-2'>
-                                    <CountUp start={0} end={1} duration={3}></CountUp>+
+                    </div>
+
+                    {/* Text and Stats Column */}
+                    <div ref={ref} data-aos='fade-left' data-aos-delay='200'>
+                        <h3 className='text-3xl font-bold text-white mb-4'>
+                            Crafting Digital Experiences That Matter
+                        </h3>
+                        <p className='text-white/80 leading-relaxed mb-6'>
+                            As a passionate web developer and designer, I specialize in building elegant, high-performance websites and applications. My focus is on creating intuitive user interfaces and writing clean, efficient code.
+                        </p>
+                        <p className='text-white/80 leading-relaxed mb-8'>
+                            I thrive in collaborative environments where I can leverage my skills in modern technologies to solve complex problems and bring creative visions to life.
+                        </p>
+
+                        {/* Stats Grid */}
+                        <div className='grid grid-cols-1 sm:grid-cols-3 gap-6'>
+                            <div className='bg-primary/40 border border-white/10 p-6 rounded-lg text-center'>
+                                <div className='text-4xl font-bold text-accent'>
+                                    {inView && <CountUp start={0} end={1} duration={3} />}
+                                    +
                                 </div>
-                                <div className='font-primary text-sm tracking-[2px]'>
-                                    Years of Experience.
+                                <div className='font-primary text-sm tracking-widest text-white/60 uppercase mt-2'>
+                                    Years Experience
                                 </div>
                             </div>
-                            <div className='mb-6 md:mb-0 md:mx-6'>
-                                <div className='text-[28px] font-tertiary text-gradient my-2'>
-                                    <CountUp start={0} end={100} duration={3}></CountUp>+
+                            <div className='bg-primary/40 border border-white/10 p-6 rounded-lg text-center'>
+                                <div className='text-4xl font-bold text-accent'>
+                                    {inView && <CountUp start={0} end={100} duration={3} />}
+                                    +
                                 </div>
-                                <div className='font-primary text-sm tracking-[2px]'>
-                                    Projects Completed.
+                                <div className='font-primary text-sm tracking-widest text-white/60 uppercase mt-2'>
+                                    Projects Done
                                 </div>
                             </div>
-                            <div className='mb-6 md:mb-0 md:ml-6'>
-                                <div className='text-[28px] font-tertiary text-gradient my-2'>
-                                    <CountUp start={0} end={13} duration={3}></CountUp>+
+                            <div className='bg-primary/40 border border-white/10 p-6 rounded-lg text-center'>
+                                <div className='text-4xl font-bold text-accent'>
+                                    {inView && <CountUp start={0} end={13} duration={3} />}
+                                    +
                                 </div>
-                                <div className='font-primary text-sm tracking-[2px]'>
-                                    Satisfied Clients.
+                                <div className='font-primary text-sm tracking-widest text-white/60 uppercase mt-2'>
+                                    Happy Clients
                                 </div>
                             </div>
                         </div>
@@ -66,7 +94,6 @@ const About = () => {
                 </div>
             </div>
         </section>
-
     );
 };
 

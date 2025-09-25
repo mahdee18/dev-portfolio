@@ -2,39 +2,42 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      primary: 'Orbitron', 
-      secondary: 'Rajdhani', 
+      primary: 'Orbitron',
+      secondary: 'Rajdhani',
       tertiary: 'Aldrich',
     },
     container: {
-      center: true, 
+      center: true,
       padding: {
-        DEFAULT: '1rem', 
+        DEFAULT: '1rem',
       },
     },
     screens: {
       sm: '640px',
       md: '768px',
-      lg: '1024px', 
+      lg: '1024px',
       xl: '1280px',
     },
     extend: {
       colors: {
         primary: '#0a0a0a',
         accent: {
-          DEFAULT: '#4F46E5', 
-          hover: '#4338CA', 
+          DEFAULT: '#4F46E5',
+          hover: '#4338CA',
         },
-         light: '#F8F9FA',
+        light: '#F8F9FA',
       },
       backgroundImage: {
         site: "url('./assets/site-bg.jpg')",
         about: "url('./assets/avatar.png')",
         services: "url('./assets/services.png')",
       },
+      // Updated animation section
       animation: {
         'gradient-x': 'gradient-x 5s ease infinite',
+        'blob': 'blob 7s infinite', // <-- Added this line for the footer
       },
+      // Updated keyframes section
       keyframes: {
         'gradient-x': {
           '0%, 100%': {
@@ -45,6 +48,13 @@ module.exports = {
             'background-size': '200% 200%',
             'background-position': 'right center',
           },
+        },
+        // Added the keyframes for the blob animation
+        'blob': {
+          '0%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '100%': { transform: 'translate(0px, 0px) scale(1)' },
         },
       },
     },
