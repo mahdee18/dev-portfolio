@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // 1. Import useState
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -9,6 +9,9 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const Work = () => {
     const { projects } = content;
 
+    // 2. Add state to control the number of visible projects
+    const [visibleProjects, setVisibleProjects] = useState(3);
+
     useEffect(() => {
         AOS.init({
             once: true,
@@ -16,6 +19,11 @@ const Work = () => {
             easing: 'ease-in-out',
         });
     }, []);
+
+    // 3. Create a function to show all projects
+    const showMoreProjects = () => {
+        setVisibleProjects(projects.length);
+    };
 
     return (
         <section className='py-20 lg:py-32' id='work'>
@@ -29,7 +37,8 @@ const Work = () => {
 
                 {/* Projects Container */}
                 <div className="space-y-20 lg:space-y-28">
-                    {projects.map((project, index) => (
+                    {/* 4. Use .slice() to only map over the visible projects */}
+                    {projects.slice(0, visibleProjects).map((project, index) => (
                         <div 
                             key={index} 
                             className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center"
@@ -37,7 +46,6 @@ const Work = () => {
                             {/* Image Column */}
                             <div 
                                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-                                // This line alternates the column order on large screens
                                 className={`relative ${index % 2 !== 0 ? 'lg:order-2' : ''}`}
                             >
                                 <a href={project.live_link} target="_blank" rel="noopener noreferrer" className="block group">
@@ -53,7 +61,6 @@ const Work = () => {
                             {/* Content Column */}
                             <div 
                                 data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-                                // This line ensures the content is in the correct column
                                 className={`flex flex-col justify-center ${index % 2 !== 0 ? 'lg:order-1' : ''}`}
                             >
                                 <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
@@ -92,6 +99,18 @@ const Work = () => {
                         </div>
                     ))}
                 </div>
+
+                {/* 5. Conditionally render the "Show More" button */}
+                {visibleProjects < projects.length && (
+                    <div className="text-center mt-16" data-aos="fade-up">
+                        <button 
+                            onClick={showMoreProjects}
+                            className='btn border-2 border-accent bg-transparent text-accent hover:bg-accent hover:text-white rounded-full transition-all duration-300 px-8 py-3 font-semibold'
+                        >
+                            Show More Projects
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );

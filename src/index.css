@@ -39,7 +39,9 @@
   This is where we build out custom, reusable component classes.
 */
 @layer components {
-  
+    .active {
+    @apply bg-accent text-white rounded-full scale-125 -translate-y-2 shadow-lg shadow-accent/50;
+  }
   /* --- Gradient Text Utility --- */
   .text-gradient {
     @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3] transition-all duration-300;
