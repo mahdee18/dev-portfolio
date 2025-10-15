@@ -227,7 +227,7 @@ const Banner = () => {
                             >
                                 <div className='relative w-[320px] h-[320px] lg:w-[480px] lg:h-[480px]'>
                                     <div className='relative w-full h-full p-1 bg-gradient-to-br from-accent via-accent/80 to-accent/60 rounded-full shadow-2xl shadow-accent/50'>
-                                        <div className='w-full h-full bg-[#0a0a0a] rounded-full p-2'>
+                                        <div className='w-full h-full bg-[#bb00ff] rounded-full p-2'>
                                             <img
                                                 src={avater1}
                                                 alt='Mahdee Al Amin'
