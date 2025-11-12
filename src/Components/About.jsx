@@ -4,16 +4,13 @@ import 'aos/dist/aos.css';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
-// Assuming SectionTitle is a reusable component for headings
 import SectionTitle from './SectionTitile'; 
-// Make sure this path is correct for your project structure
 import aboutImage from '../assets/avatar.png'; 
 
 const About = () => {
-    // This hook is great for triggering the CountUp animation only when visible
     const { ref, inView } = useInView({
-        threshold: 0.3, // Start animation when 30% of the element is visible
-        triggerOnce: true, // Animate only once
+        threshold: 0.3, 
+        triggerOnce: true, 
     });
 
     useEffect(() => {

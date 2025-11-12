@@ -36,7 +36,7 @@ const Banner = () => {
         await loadFull(engine);
     }, []);
 
-    const googleDriveResumeLink = 'https://drive.google.com/file/d/1NwgfhuAp9MOQrdFFgIsFrM3kZ1llhYm5/view?usp=drive_link';
+    const googleDriveResumeLink = 'https://drive.google.com/file/d/16jsr3bzONHh97Ae1OMGb8o3fnWDOJ0RU/view?usp=drive_link';
 
     const particlesOptions = {
         background: { color: { value: '#0a0a0a' } },

@@ -32,12 +32,11 @@ module.exports = {
         about: "url('./assets/avatar.png')",
         services: "url('./assets/services.png')",
       },
-      // Updated animation section
       animation: {
         'gradient-x': 'gradient-x 5s ease infinite',
-        'blob': 'blob 7s infinite', // <-- Added this line for the footer
+        'blob': 'blob 7s infinite', 
       },
-      // Updated keyframes section
+      
       keyframes: {
         'gradient-x': {
           '0%, 100%': {
@@ -49,7 +48,7 @@ module.exports = {
             'background-position': 'right center',
           },
         },
-        // Added the keyframes for the blob animation
+        
         'blob': {
           '0%': { transform: 'translate(0px, 0px) scale(1)' },
           '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
